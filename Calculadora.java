@@ -102,8 +102,8 @@ public class Calculadora {
     ventana.setVisible(true);
   }
 
-  public static int capturarNumeroPantalla() {
-    int numero = Integer.parseInt(lblPantalla.getText());
+  public static double capturarNumeroPantalla() {
+    double numero = Double.parseDouble(lblPantalla.getText());
     return numero;
   }
 
