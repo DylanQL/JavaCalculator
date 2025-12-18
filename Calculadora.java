@@ -17,6 +17,7 @@ public class Calculadora {
   static String memoriaPantalla = "";
   static double numeroOne;
   static double numeroTwo;
+  static String operacion;
 
   public static void main(String[] args) {
 
