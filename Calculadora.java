@@ -34,7 +34,7 @@ public class Calculadora {
     JButton[] arrayButtons = new JButton[20];
     arrayButtons[0] = new JButton("AC");
     arrayButtons[1] = new JButton("C");
-    arrayButtons[2] = new JButton("√)");
+    arrayButtons[2] = new JButton("√");
     arrayButtons[3] = new JButton("%");
     arrayButtons[4] = new JButton("7");
     arrayButtons[5] = new JButton("8");
