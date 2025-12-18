@@ -111,26 +111,26 @@ public class Calculadora {
     return numero;
   }
 
-  public static double resultadoOperacionNumeros(double numOne, double numTwo, String operacion) {
+  public static double resultadoOperacionNumeros(double numeroOne, double numeroTwo, String operacion) {
     double resultado = 0;
     switch (operacion) {
       case "suma":
-        resultado = numOne + numTwo;
+        resultado = numeroOne + numeroTwo;
         break;
       case "resta":
-        resultado = numOne - numTwo;
+        resultado = numeroOne - numeroTwo;
         break;
       case "multiplicacion":
-        resultado = numOne * numTwo;
+        resultado = numeroOne * numeroTwo;
         break;
       case "division":
-        resultado = numOne / numTwo;
+        resultado = numeroOne / numeroTwo;
         break;
       case "raiz":
-        resultado = Math.pow(numOne, 0.5);
+        resultado = Math.pow(numeroOne, 0.5);
         break;
       case "porcentaje":
-        resultado = numOne * (numTwo / 100);
+        resultado = numeroOne * (numeroTwo / 100);
         break;
       default:
         JOptionPane.showMessageDialog(null, "Error en la ejecucion del metodo resultadoOperacionNumeros");
