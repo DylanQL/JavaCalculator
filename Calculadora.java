@@ -16,7 +16,7 @@ public class Calculadora {
     JFrame ventana = new JFrame("Mi Calculadora");
     ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     ventana.setLocationRelativeTo(null);
-    ventana.setSize(400, 400);
+    ventana.setSize(300, 400);
     ventana.setLayout(new BorderLayout());
 
     // Creando label que se usara como pantall de la Calculadora
