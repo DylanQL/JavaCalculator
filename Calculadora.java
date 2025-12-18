@@ -10,6 +10,8 @@ import javax.swing.JPanel;
 
 public class Calculadora {
 
+  static JLabel lblPantalla = new JLabel("", JLabel.CENTER);
+
   public static void main(String[] args) {
 
     // Creando ventana principal de la aplicación
@@ -20,7 +22,6 @@ public class Calculadora {
     ventana.setLayout(new BorderLayout());
 
     // Creando label que se usara como pantall de la Calculadora
-    JLabel lblPantalla = new JLabel("", JLabel.CENTER);
     lblPantalla.setOpaque(true);
     lblPantalla.setBackground(Color.LIGHT_GRAY);
     lblPantalla.setPreferredSize(new Dimension(0, 100));
