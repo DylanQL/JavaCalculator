@@ -97,4 +97,12 @@ public class Calculadora {
     int numero = Integer.parseInt(lblPantalla.getText());
     return numero;
   }
+
+  public static void restablecerLabelPantalla() {
+    lblPantalla.setText("0");
+  }
+
+  public static void restablecerMemoriaPantalla() {
+    memoriaPantalla = "";
+  }
 }
