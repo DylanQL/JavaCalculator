@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -11,7 +13,7 @@ import javax.swing.JPanel;
 public class Calculadora {
 
   static JLabel lblPantalla = new JLabel("0", JLabel.CENTER);
-  static String memoriaPantalla;
+  static String memoriaPantalla = "";
 
   public static void main(String[] args) {
 
@@ -80,6 +82,18 @@ public class Calculadora {
       arrayButtons[i].setFont(new Font("Arial", Font.BOLD, 20));
       arrayButtons[i].setFocusPainted(false);
       panel.add(arrayButtons[i]);
+    }
+
+    // Añadiendo interactividad a los botones numerales
+    int[] arrayNumerosBtn = { 4, 5, 6, 8, 9, 10, 12, 13, 14, 16 };
+    for (int i : arrayNumerosBtn) {
+      arrayButtons[i].addActionListener(new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+          memoriaPantalla += arrayButtons[i].getText();
+          lblPantalla.setText(memoriaPantalla);
+        }
+      });
     }
 
     // Añadiendo elementos a la ventana principal
