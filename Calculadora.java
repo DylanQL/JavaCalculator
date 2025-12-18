@@ -40,18 +40,22 @@ public class Calculadora {
     arrayButtons[1] = new JButton("C");
     arrayButtons[2] = new JButton("√");
     arrayButtons[3] = new JButton("%");
+    arrayButtons[4] = new JButton("7");
+    arrayButtons[5] = new JButton("8");
+    arrayButtons[6] = new JButton("9");
     arrayButtons[7] = new JButton("÷");
+    arrayButtons[8] = new JButton("4");
+    arrayButtons[9] = new JButton("5");
+    arrayButtons[10] = new JButton("6");
     arrayButtons[11] = new JButton("x");
+    arrayButtons[12] = new JButton("1");
+    arrayButtons[13] = new JButton("2");
+    arrayButtons[14] = new JButton("3");
     arrayButtons[15] = new JButton("-");
+    arrayButtons[16] = new JButton("0");
     arrayButtons[17] = new JButton(".");
     arrayButtons[18] = new JButton("=");
     arrayButtons[19] = new JButton("+");
-
-    // Añadiendo al arrayButtons los botones numericos
-    int[] arrayNumerosBtn = { 4, 5, 6, 8, 9, 10, 12, 13, 14, 16 };
-    for (int i : arrayNumerosBtn) {
-      arrayButtons[i] = new JButton(Integer.toString(i));
-    }
 
     // Añadiendo color a algunos botones del arrayButtons
     arrayButtons[0].setBackground(Color.RED);
@@ -65,6 +69,7 @@ public class Calculadora {
     }
 
     // Añadiendo los botones del array al panel
+    int[] arrayNumerosBtn = { 4, 5, 6, 8, 9, 10, 12, 13, 14, 16 };
     for (int i = 0; i < arrayButtons.length; i++) {
       arrayButtons[i].setFont(new Font("Arial", Font.BOLD, 20));
       arrayButtons[i].setFocusPainted(false);
