@@ -24,6 +24,8 @@ public class Calculadora {
     lblPantalla.setPreferredSize(new Dimension(0, 100));
     lblPantalla.setFont(new Font("Arial", Font.BOLD, 20));
 
+    // Añadiendo elementos a la ventana principal
+    ventana.add(lblPantalla, BorderLayout.NORTH);
     ventana.setVisible(true);
   }
 }
