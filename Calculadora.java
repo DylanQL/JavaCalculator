@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class Calculadora {
@@ -105,6 +106,34 @@ public class Calculadora {
   public static double capturarNumeroPantalla() {
     double numero = Double.parseDouble(lblPantalla.getText());
     return numero;
+  }
+
+  public static double resultadoOperacionNumeros(double numOne, double numTwo, String operacion) {
+    double resultado = 0;
+    switch (operacion) {
+      case "suma":
+        resultado = numOne + numTwo;
+        break;
+      case "resta":
+        resultado = numOne - numTwo;
+        break;
+      case "multiplicacion":
+        resultado = numOne * numTwo;
+        break;
+      case "division":
+        resultado = numOne / numTwo;
+        break;
+      case "raiz":
+        resultado = Math.pow(numOne, 0.5);
+        break;
+      case "porcentaje":
+        resultado = numOne * (numTwo / 100);
+        break;
+      default:
+        JOptionPane.showMessageDialog(null, "Error en la ejecucion del metodo resultadoOperacionNumeros");
+        break;
+    }
+    return resultado;
   }
 
   public static void restablecerLabelPantalla() {
