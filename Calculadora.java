@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class Calculadora {
 
-  static JLabel lblPantalla = new JLabel("", JLabel.CENTER);
+  static JLabel lblPantalla = new JLabel("0", JLabel.CENTER);
 
   public static void main(String[] args) {
 
