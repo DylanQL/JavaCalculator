@@ -56,22 +56,13 @@ public class Calculadora {
     // Añadiendo color a algunos botones del arrayButtons
     arrayButtons[0].setBackground(Color.RED);
     arrayButtons[1].setBackground(Color.RED);
-    arrayButtons[2].setBackground(Color.BLACK);
-    arrayButtons[2].setForeground(Color.WHITE);
-    arrayButtons[3].setBackground(Color.BLACK);
-    arrayButtons[3].setForeground(Color.WHITE);
-    arrayButtons[7].setBackground(Color.BLACK);
-    arrayButtons[7].setForeground(Color.WHITE);
-    arrayButtons[11].setBackground(Color.BLACK);
-    arrayButtons[11].setForeground(Color.WHITE);
-    arrayButtons[15].setBackground(Color.BLACK);
-    arrayButtons[15].setForeground(Color.WHITE);
-    arrayButtons[17].setBackground(Color.BLACK);
-    arrayButtons[17].setForeground(Color.WHITE);
-    arrayButtons[18].setBackground(Color.BLACK);
-    arrayButtons[18].setForeground(Color.WHITE);
-    arrayButtons[19].setBackground(Color.BLACK);
-    arrayButtons[19].setForeground(Color.WHITE);
+
+    // Añadiendo color de fondo negro con letras blancas los otros de simbolos
+    int[] arraySimbolosBtn = { 2, 3, 7, 11, 15, 17, 18, 19 };
+    for (int i : arraySimbolosBtn) {
+      arrayButtons[i].setBackground(Color.BLACK);
+      arrayButtons[i].setForeground(Color.WHITE);
+    }
 
     // Añadiendo los botones del array al panel
     for (int i = 0; i < arrayButtons.length; i++) {
