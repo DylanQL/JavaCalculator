@@ -53,8 +53,14 @@ public class Calculadora {
     arrayButtons[18] = new JButton("=");
     arrayButtons[19] = new JButton("+");
 
+    // Añadiendo los botones del array al panel
+    for (int i = 0; i < arrayButtons.length; i++) {
+      arrayButtons[i].setFont(new Font("Arial", Font.BOLD, 20));
+      panel.add(arrayButtons[i]);
+    }
+
     // Añadiendo elementos a la ventana principal
-    ventana.add(panel, BorderLayout.SOUTH);
+    ventana.add(panel, BorderLayout.CENTER);
     ventana.add(lblPantalla, BorderLayout.NORTH);
     ventana.setVisible(true);
   }
