@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 public class Calculadora {
 
   static JLabel lblPantalla = new JLabel("0", JLabel.CENTER);
+  static String memoriaPantalla;
 
   public static void main(String[] args) {
 
