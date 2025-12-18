@@ -87,6 +87,15 @@ public class Calculadora {
       });
     }
 
+    // Añadiendo interactividad en el boton C
+    arrayButtons[1].addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        restablecerMemoriaPantalla();
+        restablecerLabelPantalla();
+      }
+    });
+
     // Añadiendo elementos a la ventana principal
     ventana.add(panel, BorderLayout.CENTER);
     ventana.add(lblPantalla, BorderLayout.NORTH);
