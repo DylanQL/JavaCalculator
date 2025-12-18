@@ -56,6 +56,7 @@ public class Calculadora {
     // Añadiendo los botones del array al panel
     for (int i = 0; i < arrayButtons.length; i++) {
       arrayButtons[i].setFont(new Font("Arial", Font.BOLD, 20));
+      arrayButtons[i].setFocusPainted(false);
       panel.add(arrayButtons[i]);
     }
 
