@@ -15,6 +15,8 @@ public class Calculadora {
 
   static JLabel lblPantalla = new JLabel("0", JLabel.CENTER);
   static String memoriaPantalla = "";
+  static double numeroOne;
+  static double numeroTwo;
 
   public static void main(String[] args) {
 
