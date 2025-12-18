@@ -87,4 +87,9 @@ public class Calculadora {
     ventana.add(lblPantalla, BorderLayout.NORTH);
     ventana.setVisible(true);
   }
+
+  public static int capturarNumeroPantalla() {
+    int numero = Integer.parseInt(lblPantalla.getText());
+    return numero;
+  }
 }
