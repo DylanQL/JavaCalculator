@@ -233,4 +233,12 @@ public class Calculadora {
   public static void restablecerMemoriaPantalla() {
     memoriaPantalla = "";
   }
+
+  public static String borrarDecimalesInnecesarios(Double numeroInput) {
+    if (numeroInput == numeroInput.longValue()) {
+      return String.format("%.0f", numeroInput);
+    } else {
+      return String.valueOf(numeroInput);
+    }
+  }
 }
