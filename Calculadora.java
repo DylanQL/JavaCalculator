@@ -93,6 +93,19 @@ public class Calculadora {
             lblPantalla.setText(memoriaPantalla);
           }
         });
+      } else {
+        arrayButtons[i].addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+            if (memoriaPantalla.equals("")) {
+              memoriaPantalla = "0";
+            }
+            if (!memoriaPantalla.contains(".")) {
+              memoriaPantalla += arrayButtons[i].getText();
+              lblPantalla.setText(memoriaPantalla);
+            }
+          }
+        });
       }
     }
 
