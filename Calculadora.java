@@ -114,6 +114,16 @@ public class Calculadora {
       }
     }
 
+    // Añadiendo interactividad al boton igual
+    arrayButtons[18].addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        numeroTwo = Double.parseDouble(memoriaPantalla);
+        numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
+        lblPantalla.setText(Double.toString(numeroOne));
+      }
+    });
+
     // Añadiendo elementos a la ventana principal
     ventana.add(panel, BorderLayout.CENTER);
     ventana.add(lblPantalla, BorderLayout.NORTH);
