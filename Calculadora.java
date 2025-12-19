@@ -102,7 +102,7 @@ public class Calculadora {
 
     // Añadiendo interactividad a botones de sumar, restar, multiplicar y dividir
     for (int i : arraySimbolosBtn) {
-      if (i != 3 && i != 2 && i != 18) {
+      if (i != 2 && i != 3 && i != 17 && i != 18) {
         arrayButtons[i].addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
