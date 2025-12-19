@@ -124,22 +124,22 @@ public class Calculadora {
   public static double resultadoOperacionNumeros(double numeroOne, double numeroTwo, String operacion) {
     double resultado = 0;
     switch (operacion) {
-      case "suma":
+      case "+":
         resultado = numeroOne + numeroTwo;
         break;
-      case "resta":
+      case "-":
         resultado = numeroOne - numeroTwo;
         break;
-      case "multiplicacion":
+      case "x":
         resultado = numeroOne * numeroTwo;
         break;
-      case "division":
+      case "÷":
         resultado = numeroOne / numeroTwo;
         break;
-      case "raiz":
+      case "√":
         resultado = Math.pow(numeroOne, 0.5);
         break;
-      case "porcentaje":
+      case "%":
         resultado = numeroOne * (numeroTwo / 100);
         break;
       default:
