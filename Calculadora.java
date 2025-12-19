@@ -82,16 +82,18 @@ public class Calculadora {
 
     // Añadiendo interactividad a los botones numerales
     for (int i : arrayNumerosBtn) {
-      arrayButtons[i].addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-          if (memoriaPantalla.equals("0")) {
-            memoriaPantalla = "";
+      if (i != 17) {
+        arrayButtons[i].addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+            if (memoriaPantalla.equals("0")) {
+              memoriaPantalla = "";
+            }
+            memoriaPantalla += arrayButtons[i].getText();
+            lblPantalla.setText(memoriaPantalla);
           }
-          memoriaPantalla += arrayButtons[i].getText();
-          lblPantalla.setText(memoriaPantalla);
-        }
-      });
+        });
+      }
     }
 
     // Añadiendo interactividad en el boton C
