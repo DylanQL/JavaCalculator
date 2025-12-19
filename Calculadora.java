@@ -100,6 +100,20 @@ public class Calculadora {
       }
     });
 
+    // Añadiendo interactividad a botones de sumar, restar, multiplicar y dividir
+    for (int i : arraySimbolosBtn) {
+      if (i != 3 && i != 2) {
+        arrayButtons[i].addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+            numeroOne = capturarNumeroPantalla();
+            operacion = arrayButtons[i].getText();
+            restablecerMemoriaPantalla();
+          }
+        });
+      }
+    }
+
     // Añadiendo elementos a la ventana principal
     ventana.add(panel, BorderLayout.CENTER);
     ventana.add(lblPantalla, BorderLayout.NORTH);
