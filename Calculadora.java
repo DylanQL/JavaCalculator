@@ -150,7 +150,7 @@ public class Calculadora {
         operacion = "√";
         numeroOne = capturarNumeroPantalla();
         double resultado = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
-        lblPantalla.setText(Double.toString(resultado));
+        lblPantalla.setText(borrarDecimalesInnecesarios(resultado));
         restablecerMemoriaPantalla();
       }
     });
@@ -165,7 +165,7 @@ public class Calculadora {
         operacion = "%";
         numeroTwo = Double.parseDouble(memoriaPantalla);
         numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
-        lblPantalla.setText(Double.toString(numeroOne));
+        lblPantalla.setText(borrarDecimalesInnecesarios(numeroOne));
         restablecerMemoriaPantalla();
       }
     });
@@ -179,7 +179,7 @@ public class Calculadora {
         }
         numeroTwo = Double.parseDouble(memoriaPantalla);
         numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
-        lblPantalla.setText(Double.toString(numeroOne));
+        lblPantalla.setText(borrarDecimalesInnecesarios(numeroOne));
         restablecerMemoriaPantalla();
       }
     });
