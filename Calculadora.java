@@ -100,16 +100,6 @@ public class Calculadora {
       }
     });
 
-    // Añadiendo interactividad al boton +
-    arrayButtons[19].addActionListener(new ActionListener() {
-      @Override
-      public void actionPerformed(ActionEvent e) {
-        numeroOne = capturarNumeroPantalla();
-        operacion = "suma";
-        restablecerMemoriaPantalla();
-      }
-    });
-
     // Añadiendo elementos a la ventana principal
     ventana.add(panel, BorderLayout.CENTER);
     ventana.add(lblPantalla, BorderLayout.NORTH);
