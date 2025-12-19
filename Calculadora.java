@@ -17,7 +17,7 @@ public class Calculadora {
   static String memoriaPantalla = "";
   static double numeroOne = 0;
   static double numeroTwo = 0;
-  static String operacion = "";
+  static String operacion = "=";
 
   public static void main(String[] args) {
 
@@ -85,6 +85,9 @@ public class Calculadora {
       arrayButtons[i].addActionListener(new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
+          if (memoriaPantalla.equals("0")) {
+            memoriaPantalla = "";
+          }
           memoriaPantalla += arrayButtons[i].getText();
           lblPantalla.setText(memoriaPantalla);
         }
@@ -97,6 +100,17 @@ public class Calculadora {
       public void actionPerformed(ActionEvent e) {
         restablecerMemoriaPantalla();
         restablecerLabelPantalla();
+      }
+    });
+
+    // Añadiendo interactividad en el boton AC
+    arrayButtons[0].addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        restablecerLabelPantalla();
+        restablecerMemoriaPantalla();
+        numeroOne = 0;
+        numeroTwo = 0;
       }
     });
 
@@ -114,13 +128,44 @@ public class Calculadora {
       }
     }
 
+    // Añadiendo interactividad al boton de raiz cuadrada
+    arrayButtons[2].addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        operacion = "√";
+        numeroOne = capturarNumeroPantalla();
+        double resultado = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
+        lblPantalla.setText(Double.toString(resultado));
+        restablecerMemoriaPantalla();
+      }
+    });
+
+    // Añadiendo interactividad al boton de porcentaje
+    arrayButtons[3].addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+        if (memoriaPantalla.equals("")) {
+          memoriaPantalla = "0";
+        }
+        operacion = "%";
+        numeroTwo = Double.parseDouble(memoriaPantalla);
+        numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
+        lblPantalla.setText(Double.toString(numeroOne));
+        restablecerMemoriaPantalla();
+      }
+    });
+
     // Añadiendo interactividad al boton igual
     arrayButtons[18].addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
+        if (memoriaPantalla.equals("")) {
+          memoriaPantalla = "0";
+        }
         numeroTwo = Double.parseDouble(memoriaPantalla);
         numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
         lblPantalla.setText(Double.toString(numeroOne));
+        restablecerMemoriaPantalla();
       }
     });
 
@@ -155,6 +200,9 @@ public class Calculadora {
         break;
       case "%":
         resultado = numeroOne * (numeroTwo / 100);
+        break;
+      case "=":
+        resultado = capturarNumeroPantalla();
         break;
       default:
         JOptionPane.showMessageDialog(null, "Error en la ejecucion del metodo resultadoOperacionNumeros");
