@@ -18,6 +18,7 @@ public class Calculadora {
   static double numeroOne = 0;
   static double numeroTwo = 0;
   static String operacion = "=";
+  static int varTemp = 0;
 
   public static void main(String[] args) {
 
@@ -135,6 +136,7 @@ public class Calculadora {
         arrayButtons[i].addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
+            varTemp = 0;
             numeroOne = capturarNumeroPantalla();
             operacion = arrayButtons[i].getText();
             restablecerMemoriaPantalla();
@@ -177,10 +179,13 @@ public class Calculadora {
         if (memoriaPantalla.equals("")) {
           memoriaPantalla = "0";
         }
-        numeroTwo = Double.parseDouble(memoriaPantalla);
+        if (varTemp == 0) {
+          numeroTwo = Double.parseDouble(memoriaPantalla);
+        }
         numeroOne = resultadoOperacionNumeros(numeroOne, numeroTwo, operacion);
         lblPantalla.setText(borrarDecimalesInnecesarios(numeroOne));
         restablecerMemoriaPantalla();
+        varTemp = 1;
       }
     });
 
